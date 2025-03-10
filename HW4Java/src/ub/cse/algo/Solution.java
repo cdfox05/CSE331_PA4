@@ -13,7 +13,7 @@ public class Solution {
         _battles = battles;
     }
 
-    class Comparor implements Comparator<int[]> //priority queue comparator
+    class BattleComparator implements Comparator<int[]> //priority queue comparator
     {
         @Override
         public int compare(int[] a, int[] b) {
@@ -39,7 +39,7 @@ public class Solution {
     public ArrayList<int[]> getSchedule(){
         ArrayList<int[]> schedule = new ArrayList<int[]>();
 
-        PriorityQueue<int[]> battle = new PriorityQueue<>(_n_battles, new Comparor());
+        PriorityQueue<int[]> battle = new PriorityQueue<>(_n_battles, new BattleComparator());
 
         for (int i = 0; i < _n_battles; i++)
         {
